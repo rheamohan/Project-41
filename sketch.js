@@ -6,7 +6,7 @@ const Body = Matter.Body;
 
 var engine,world;
 
-var Umbrella1;
+var umbrella;
 
 function preload(){
     
@@ -17,20 +17,19 @@ function setup(){
     engine = Engine.create;
     world = engine.world;
 
-    Umbrella1 = new Umbrella(120,100,30);
-
+    //umbrella = new Umbrella(120,100,30);
 
     Engine.run(engine);
     
 }
 
 function draw(){
-    rectMode(CENTER);
+    //rectMode(CENTER);
     background(0);
     
     Engine.update(engine);
     drawSprite();
 
-    Umbrella1.display();
+    umbrella.display();
 }   
 
