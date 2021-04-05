@@ -9,9 +9,13 @@ var engine,world;
 var umbrella;
 var maxDrops = 100;
 
+var thunder;
+
 var drops = [];
 
 function preload(){
+
+
     
 }
 
@@ -22,6 +26,8 @@ function setup(){
     world = engine.world;
 
     umbrella = new Umbrella(650,1850,900);
+
+    thunder = new Thunder(100,10,100,100);
 
     Engine.run(engine);
     
@@ -40,5 +46,6 @@ function draw(){
     drawSprite();
 
     umbrella.display();
+    thunder.display();
 }   
 
